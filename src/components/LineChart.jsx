@@ -334,16 +334,16 @@ export default function S2() {
 }
 
 const data2 = [
-  { name: "Page A", uv: 4000, pv: 7400, amt: 2400 },
-  { name: "Page B", uv: 3000, pv: 5398, amt: 2210 },
-  { name: "Page C", uv: 2000, pv: 2800, amt: 2290 },
-  { name: "Page D", uv: 2780, pv: 4908, amt: 2000 },
-  { name: "Page E", uv: 1890, pv: 9800, amt: 2181 },
-  { name: "Page F", uv: 2390, pv: 7800, amt: 2500 },
-  { name: "Page G", uv: 3490, pv: 3300, amt: 2100 },
-  { name: "Page H", uv: 4490, pv: 1300, amt: 2100 },
-  { name: "Page L", uv: 3490, pv: 5300, amt: 2100 },
-  { name: "Page M", uv: 3490, pv: 7300, amt: 2100 },
+  { name: " A", uv: 4000, pv: 7400, amt: 2400 },
+  { name: " B", uv: 3000, pv: 5398, amt: 2210 },
+  { name: " C", uv: 2000, pv: 2800, amt: 2290 },
+  { name: " D", uv: 2780, pv: 4908, amt: 2000 },
+  { name: " E", uv: 1890, pv: 9800, amt: 2181 },
+  { name: " F", uv: 2390, pv: 7800, amt: 2500 },
+  { name: " G", uv: 3490, pv: 3300, amt: 2100 },
+  { name: " H", uv: 4490, pv: 1300, amt: 2100 },
+  { name: " L", uv: 3490, pv: 5300, amt: 2100 },
+  { name: " M", uv: 3490, pv: 7300, amt: 2100 },
 ];
 
 import {
@@ -374,16 +374,16 @@ import { BarChart, Bar } from "recharts";
 
 const SimpleBarChart = () => {
   const data = [
-    { name: "Page A", uv: 4000, pv: 7400, amt: 2400 },
-    { name: "Page B", uv: 3000, pv: 5398, amt: 2210 },
-    { name: "Page C", uv: 2000, pv: 2800, amt: 2290 },
-    { name: "Page D", uv: 2780, pv: 4908, amt: 2000 },
-    { name: "Page E", uv: 1890, pv: 9800, amt: 2181 },
-    { name: "Page F", uv: 2390, pv: 7800, amt: 2500 },
-    { name: "Page G", uv: 3490, pv: 3300, amt: 2100 },
-    { name: "Page H", uv: 4490, pv: 1300, amt: 2100 },
-    { name: "Page L", uv: 3490, pv: 5300, amt: 2100 },
-    { name: "Page M", uv: 3490, pv: 7300, amt: 2100 },
+    { name: " A", uv: 4000, pv: 7400, amt: 2400 },
+    { name: " B", uv: 3000, pv: 5398, amt: 2210 },
+    { name: " C", uv: 2000, pv: 2800, amt: 2290 },
+    { name: " D", uv: 2780, pv: 4908, amt: 2000 },
+    { name: " E", uv: 1890, pv: 9800, amt: 2181 },
+    { name: " F", uv: 2390, pv: 7800, amt: 2500 },
+    { name: " G", uv: 3490, pv: 3300, amt: 2100 },
+    { name: " H", uv: 4490, pv: 1300, amt: 2100 },
+    { name: " L", uv: 3490, pv: 5300, amt: 2100 },
+    { name: " M", uv: 3490, pv: 7300, amt: 2100 },
   ];
 
   return (
