@@ -1,0 +1,65 @@
+/* globals.css or your global stylesheet */
+
+/* Tailwind CSS base, components, utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2e3440;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #88c0d0;
+    border-radius: 10px;
+    border: 3px solid #2e3440;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #81a1c1;
+}
+
+/* Other styles */
+.active {
+    color: #fff;
+    background: linear-gradient(178.18deg, #ff9500 -13.56%, #ff9500 158.3%);
+}
+
+body {
+    background: #fff;
+}
+
+.hover-bg:hover {
+    background: linear-gradient(178.18deg, #ff9500 -13.56%, #ff9500 158.3%);
+    color: #fff;
+}
+
+.hover-bg:hover svg path {
+    stroke: #fff;
+}
+svg path {
+    stroke: #ff9500;
+}
+
+.span-class {
+    font-family: inherit;
+}
+
+.button:hover .span-class {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.notification-number {
+    background: linear-gradient(178.18deg, #dfbc8b -13.56%, #e0c7a4 158.3%);
+}
+
+.active .active-svg path {
+    stroke: #fff;
+}
