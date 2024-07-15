@@ -37,13 +37,13 @@ export default function S2() {
     }
   }
   return (
-    <section className="w-[100%] h-[996px] lg:h-[498px] flex flex-wrap justify-between px-5 gap-4">
-      <article className="w-[100%] lg:w-[49%] h-[49%] lg:h-[100%] bg-[rgba(0,0,0,0.45)] rounded-xl p-3">
+    <section className="w-[100%] h-[996px] lg:h-[498px] flex flex-wrap justify-between p-5 gap-4">
+      <article className="w-[100%] lg:w-[49%] h-[49%] lg:h-[100%] bg-[#ff95009c] rounded-xl p-3">
         <div className="w-[100%] flex h-[15%]">
           <div className="w-[50%] h-[100%] ">
-            <p className="w-[100%] text-[1.5rem] font-bold">Store Metrics</p>
-            <p className="w-[100%] text-[.9rem] text-zinc-300 flex gap-2">
-              <i className="bi bi-calendar2-week-fill"></i> in last 30 days
+            <p className="w-[100%] text-[1.5rem] font-bold text-white ">Store Metrics</p>
+            <p className="w-[100%] text-[.9rem] text-white flex gap-2 ">
+              <i className="bi bi-calendar2-week-fill text-white" ></i> in last 30 days
               revenue
             </p>
           </div>
@@ -55,7 +55,7 @@ export default function S2() {
             ></i>
             <ul
               ref={x1}
-              className="bg-black w-[180px] p-2 px-3 text-zinc-300 absolute top-[70%] hidden flex-wrap text-[1rem] rounded-xl "
+              className="bg-[#ff95009c] w-[180px] p-2 px-3 text-white absolute top-[70%] hidden flex-wrap text-[1rem] rounded-xl "
             >
               <li className="w-[100%] h-[30px]">action</li>
               <li className="w-[100%] h-[30px]">another</li>
@@ -66,40 +66,40 @@ export default function S2() {
           </div>
         </div>
         <div className="w-[100%] h-[20%] flex gap-5 justify-around items-center">
-          <div className="w-[32%] h-[80%] flex flex-wrap content-center">
-            <p className="w-[100%] text-zinc-400 text-[1rem]">Revenue</p>
-            <p className="w-[100%] text-[1.5rem] font-bold">$4805</p>
-            <p className="w-[100%] text-[1rem] text-zinc-400">
+          <div className="w-[32%] h-[80%] flex flex-wrap content-center text-white">
+            <p className="w-[100%] text-white text-[1rem]">Revenue</p>
+            <p className="w-[100%] text-[1.5rem] font-bold text-white">$4805</p>
+            <p className="w-[100%] text-[1rem] text-white">
               <i className="bi bi-caret-up-fill"></i> $1458 Since last month
             </p>
           </div>
-          <div className="w-[32%] h-[80%] flex flex-wrap content-center">
-            <p className="w-[100%] text-zinc-400 text-[1rem]">
+          <div className="w-[32%] h-[80%] flex flex-wrap content-center text-white">
+            <p className="w-[100%] text-white text-[1rem]">
               Total Customers
             </p>
-            <p className="w-[100%] text-[1.5rem] font-bold">8.4K</p>
-            <p className="w-[100%] text-[1rem] text-zinc-400">
+            <p className="w-[100%] text-[1.5rem] font-bold text-white">8.4K</p>
+            <p className="w-[100%] text-[1rem] text-white">
               <i className="bi bi-caret-up-fill"></i> 12.3% Since last month
             </p>
           </div>
-          <div className="w-[32%] h-[80%] flex flex-wrap content-center">
-            <p className="w-[100%] text-zinc-400 text-[1rem]">Store Visitors</p>
-            <p className="w-[100%] text-[1.5rem] font-bold">59K</p>
-            <p className="w-[100%] text-[1rem] text-zinc-400">
+          <div className="w-[32%] h-[80%] flex flex-wrap content-center text-white">
+            <p className="w-[100%] text-white text-[1rem]">Store Visitors</p>
+            <p className="w-[100%] text-[1.5rem] font-bold text-white">59K</p>
+            <p className="w-[100%] text-[1rem] text-white">
               <i className="bi bi-caret-down-fill"></i> 2.4% Since last month
             </p>
           </div>
         </div>
-        <div className="w-[100%] h-[70%]">
+        <div className="w-[100%] h-[60%] mt-5">
           <SimpleBarChart />
         </div>
       </article>
-      <article className="w-[100%] lg:w-[49%] h-[49%] lg:h-[100%] bg-[rgba(0,0,0,0.45)] rounded-xl p-3">
+      <article className="w-[100%] lg:w-[49%] h-[49%] lg:h-[100%] bg-[#ff95009c] rounded-xl p-5">
         <div className="w-[100%] h-[15%]  flex">
           <div className="w-[50%] h-[100%] ">
-            <p className="w-[100%] text-[1.5rem] font-bold">Top Products</p>
-            <p className="w-[100%] text-[.9rem] text-zinc-300 flex gap-2">
-              <i className="bi bi-calendar2-week-fill"></i> in last 30 days
+            <p className="w-[100%] text-[1.5rem] font-bold text-white">Top Products</p>
+            <p className="w-[100%] text-[.9rem] text-white flex gap-2">
+              <i className="bi bi-calendar2-week-fill text-white" ></i> in last 30 days
               revenue
             </p>
           </div>
@@ -111,7 +111,7 @@ export default function S2() {
             ></i>
             <ul
               ref={x}
-              className="bg-black w-[180px] p-2 px-3 text-zinc-300 absolute top-[70%] hidden flex-wrap text-[1rem] rounded-xl "
+              className="bg-black w-[180px] p-2 px-3 text-white absolute top-[70%] hidden flex-wrap text-[1rem] rounded-xl "
             >
               <li className="w-[100%] h-[30px]">action</li>
               <li className="w-[100%] h-[30px]">another</li>
@@ -122,8 +122,8 @@ export default function S2() {
           </div>
         </div>
         <div className="w-[100%] h-[85%] overflow-hidden ">
-          <ul className="capitalize w-[calc(100%+17px)] h-[100%] overflow-y-scroll flex flex-wrap gap-4 *:rounded-xl *:bg-[rgba(255,255,255,.15)]">
-            <li className="flex w-[100%] h-[11vh] border-[.05px] border-[rgba(147,146,146,0.34)]">
+          <ul className="capitalize w-[calc(100%+17px)] h-[100%] overflow-y-scroll flex flex-wrap gap-4 *:rounded-xl *:bg-[#ff950000] p-2">
+            <li className="flex w-[100%] h-[11vh] border-[.05px] border-[#ff95009c]">
               <div className="w-[50%] h-[100%] flex justify-start items-center">
                 <figure className="w-[30%] h-[100%] flex justify-center items-center">
                   <Image
@@ -137,22 +137,22 @@ export default function S2() {
                     }}
                   />
                 </figure>
-                <div className="h-[100%] *:w-[100%] w-[60%] justify-start *:text-[1rem] flex flex-wrap content-center">
+                <div className="h-[100%] *:w-[100%] w-[60%] justify-start *:text-[1rem] flex flex-wrap content-center text-white">
                   <p>light blue chair</p>
-                  <p className="text-zinc-300">$240.00</p>
+                  <p className="text-white">$240.00</p>
                 </div>
               </div>
               <div className="w-[50%] h-[100%] flex justify-between items-center">
-                <div className="h-[100%] w-[40%] *:w-[100%] *:text-[1rem] flex flex-wrap content-center">
+                <div className="h-[100%] w-[40%] *:w-[100%] *:text-[1rem] flex flex-wrap content-center text-white">
                   <p>$2140.00</p>
-                  <p className="text-zinc-300">345 sales</p>
+                  <p className="text-white">345 sales</p>
                 </div>
                 <div className="w-[60%] h-[70%]">
                   <SimpleLineChart2 />
                 </div>
               </div>
             </li>
-            <li className="flex w-[100%] h-[11vh] border-[.05px] border-[rgba(147,146,146,0.34)]">
+            <li className="flex w-[100%] h-[11vh] border-[.05px] border-[#ff95009c]">
               <div className="w-[50%] h-[100%] flex justify-start items-center">
                 <figure className="w-[30%] h-[100%] flex justify-center items-center">
                   <Image
@@ -166,22 +166,22 @@ export default function S2() {
                     }}
                   />
                 </figure>
-                <div className="h-[100%] *:w-[100%] w-[60%] justify-start *:text-[1rem] flex flex-wrap content-center">
+                <div className="h-[100%] *:w-[100%] w-[60%] justify-start *:text-[1rem] flex flex-wrap content-center text-white">
                   <p>honor mobile 7x</p>
-                  <p className="text-zinc-300">$159.00</p>
+                  <p className="text-white">$159.00</p>
                 </div>
               </div>
               <div className="w-[50%] h-[100%] flex justify-between items-center">
-                <div className="h-[100%] w-[40%] *:w-[100%] *:text-[1rem] flex flex-wrap content-center">
+                <div className="h-[100%] w-[40%] *:w-[100%] *:text-[1rem] flex flex-wrap content-center text-white">
                   <p>$3570.00</p>
-                  <p className="text-zinc-300">148 sales</p>
+                  <p className="text-white">148 sales</p>
                 </div>
                 <div className="w-[60%] h-[70%]">
                   <SimpleLineChart2 />
                 </div>
               </div>
             </li>
-            <li className="flex w-[100%] h-[11vh] border-[.05px] border-[rgba(147,146,146,0.34)]">
+            <li className="flex w-[100%] h-[11vh] border-[.05px] border-[#ff95009c]">
               <div className="w-[50%] h-[100%] flex justify-start items-center">
                 <figure className="w-[30%] h-[100%] flex justify-center items-center">
                   <Image
@@ -195,22 +195,22 @@ export default function S2() {
                     }}
                   />
                 </figure>
-                <div className="h-[100%] *:w-[100%] w-[60%] justify-start *:text-[1rem] flex flex-wrap content-center">
+                <div className="h-[100%] *:w-[100%] w-[60%] justify-start *:text-[1rem] flex flex-wrap content-center text-white">
                   <p>hand watch</p>
-                  <p className="text-zinc-300">$250.00</p>
+                  <p className="text-white">$250.00</p>
                 </div>
               </div>
               <div className="w-[50%] h-[100%] flex justify-between items-center">
-                <div className="h-[100%] w-[40%] *:w-[100%] *:text-[1rem] flex flex-wrap content-center">
+                <div className="h-[100%] w-[40%] *:w-[100%] *:text-[1rem] flex flex-wrap content-center text-white">
                   <p>$3650.00</p>
-                  <p className="text-zinc-300">122 sales</p>
+                  <p className="text-white">122 sales</p>
                 </div>
                 <div className="w-[60%] h-[70%]">
                   <SimpleLineChart2 />
                 </div>
               </div>
             </li>
-            <li className="flex w-[100%] h-[11vh] border-[.05px] border-[rgba(147,146,146,0.34)]">
+            <li className="flex w-[100%] h-[11vh] border-[.05px] border-[#ff95009c]">
               <div className="w-[50%] h-[100%] flex justify-start items-center">
                 <figure className="w-[30%] h-[100%] flex justify-center items-center">
                   <Image
@@ -224,22 +224,22 @@ export default function S2() {
                     }}
                   />
                 </figure>
-                <div className="h-[100%] *:w-[100%] w-[60%] justify-start *:text-[1rem] flex flex-wrap content-center">
+                <div className="h-[100%] *:w-[100%] w-[60%] justify-start *:text-[1rem] flex flex-wrap content-center text-white">
                   <p>mini laptop</p>
-                  <p className="text-zinc-300">$260.00</p>
+                  <p className="text-white">$260.00</p>
                 </div>
               </div>
               <div className="w-[50%] h-[100%] flex justify-between items-center">
-                <div className="h-[100%] w-[40%] *:w-[100%] *:text-[1rem] flex flex-wrap content-center">
+                <div className="h-[100%] w-[40%] *:w-[100%] *:text-[1rem] flex flex-wrap content-center text-white">
                   <p>$6320.00</p>
-                  <p className="text-zinc-300">452 sales</p>
+                  <p className="text-white">452 sales</p>
                 </div>
                 <div className="w-[60%] h-[70%]">
                   <SimpleLineChart2 />
                 </div>
               </div>
             </li>
-            <li className="flex w-[100%] h-[11vh] border-[.05px] border-[rgba(147,146,146,0.34)]">
+            <li className="flex w-[100%] h-[11vh] border-[.05px] border-[#ff95009c]">
               <div className="w-[50%] h-[100%] flex justify-start items-center">
                 <figure className="w-[30%] h-[100%] flex justify-center items-center">
                   <Image
@@ -253,22 +253,22 @@ export default function S2() {
                     }}
                   />
                 </figure>
-                <div className="h-[100%] *:w-[100%] w-[60%] justify-start *:text-[1rem] flex flex-wrap content-center">
+                <div className="h-[100%] *:w-[100%] w-[60%] justify-start *:text-[1rem] flex flex-wrap content-center text-white">
                   <p>slim-t-shirt</p>
-                  <p className="text-zinc-300">$112.00</p>{" "}
+                  <p className="text-white">$112.00</p>{" "}
                 </div>
               </div>
               <div className="w-[50%] h-[100%] flex justify-between items-center">
-                <div className="h-[100%] w-[40%] *:w-[100%] *:text-[1rem] flex flex-wrap content-center">
+                <div className="h-[100%] w-[40%] *:w-[100%] *:text-[1rem] flex flex-wrap content-center text-white">
                   <p>$2360.00</p>
-                  <p className="text-zinc-300">572 sales</p>
+                  <p className="text-white">572 sales</p>
                 </div>
                 <div className="w-[60%] h-[70%]">
                   <SimpleLineChart2 />
                 </div>
               </div>
             </li>
-            <li className="flex w-[100%] h-[11vh] border-[.05px] border-[rgba(147,146,146,0.34)]">
+            <li className="flex w-[100%] h-[11vh] border-[.05px] border-[#ff95009c]">
               <div className="w-[50%] h-[100%] flex justify-start items-center">
                 <figure className="w-[30%] h-[100%] flex justify-center items-center">
                   <Image
@@ -282,22 +282,22 @@ export default function S2() {
                     }}
                   />
                 </figure>
-                <div className="h-[100%] *:w-[100%] w-[60%] justify-start *:text-[1rem] flex flex-wrap content-center">
+                <div className="h-[100%] *:w-[100%] w-[60%] justify-start *:text-[1rem] flex flex-wrap content-center text-white">
                   <p>smart headphones</p>
-                  <p className="text-zinc-300">$360.00</p>
+                  <p className="text-white">$360.00</p>
                 </div>
               </div>
               <div className="w-[50%] h-[100%] flex justify-between items-center">
-                <div className="h-[100%] w-[40%] *:w-[100%] *:text-[1rem] flex flex-wrap content-center">
+                <div className="h-[100%] w-[40%] *:w-[100%] *:text-[1rem] flex flex-wrap content-center text-white">
                   <p>$9840.00</p>
-                  <p className="text-zinc-300">275 sales</p>
+                  <p className="text-white">275 sales</p>
                 </div>
                 <div className="w-[60%] h-[70%]">
                   <SimpleLineChart2 />
                 </div>
               </div>
             </li>
-            <li className="flex w-[100%] h-[11vh] border-[.05px] border-[rgba(147,146,146,0.34)]">
+            <li className="flex w-[100%] h-[11vh] border-[.05px] border-[#ff95009c]">
               <div className="w-[50%] h-[100%] flex justify-start items-center">
                 <figure className="w-[30%] h-[100%] flex justify-center items-center">
                   <Image
@@ -311,15 +311,15 @@ export default function S2() {
                     }}
                   />
                 </figure>
-                <div className="h-[100%] *:w-[100%] w-[60%] justify-start *:text-[1rem] flex flex-wrap content-center">
+                <div className="h-[100%] *:w-[100%] w-[60%] justify-start *:text-[1rem] flex flex-wrap content-center text-white">
                   <p>green sports shoes</p>
-                  <p className="text-zinc-300">$410.00</p>
+                  <p className="text-white">$410.00</p>
                 </div>
               </div>
               <div className="w-[50%] h-[100%] flex justify-between items-center">
-                <div className="h-[100%] w-[40%] *:w-[100%] *:text-[1rem] flex flex-wrap content-center">
+                <div className="h-[100%] w-[40%] *:w-[100%] *:text-[1rem] flex flex-wrap content-center text-white">
                   <p>$3840.00</p>
-                  <p className="text-zinc-300">265 sales</p>
+                  <p className="text-white">265 sales</p>
                 </div>
                 <div className="w-[60%] h-[70%]">
                   <SimpleLineChart2 />
