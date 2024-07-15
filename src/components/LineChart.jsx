@@ -361,14 +361,7 @@ const SimpleLineChart2 = () => {
   return (
     <ResponsiveContainer width="100%" height="100%">
       <LineChart data={data2}>
-        <Tooltip
-          contentStyle={{
-            backgroundColor: "#ff9500b4 ",
-            color: "white",
-            fontWeight: "bold",
-            fontSize: ".8rem",
-          }}
-        />
+        <Tooltip contentStyle={tooltipStyle} />
 
         <Line type="monotone" dataKey="pv" stroke="white" strokeWidth={5} />
       </LineChart>
@@ -411,8 +404,8 @@ const SimpleBarChart = () => {
   );
 };
 const tooltipStyle = {
-  backgroundColor: "rgba(0,0,0,0.8)",
-  border: "1px solid #333",
+  backgroundColor: "#ff9500b4 ",
+  border: "1px solid #ff9500b4",
   borderRadius: "5px",
   padding: "10px",
   color: "#fff",

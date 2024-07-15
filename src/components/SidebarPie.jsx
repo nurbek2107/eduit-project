@@ -33,21 +33,20 @@ const SimpleLineChart = () => {
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
         <YAxis />
-        <Tooltip
-          contentStyle={{
-            backgroundColor: "#ff9500b4 ",
-            color: "white",
-            fontWeight: "bold",
-            fontSize: ".8rem",
-          }}
-        />
+        <Tooltip contentStyle={tooltipStyle} />
 
         <Line type="monotone" dataKey="pv" stroke="white" strokeWidth={5} />
       </LineChart>
     </ResponsiveContainer>
   );
 };
-
+const tooltipStyle = {
+  backgroundColor: "#ff9500b4 ",
+  border: "1px solid #ff9500b4",
+  borderRadius: "5px",
+  padding: "10px",
+  color: "#fff",
+};
 export default function S1() {
   return (
     <section className="w-[100%] h-[666px] md:h-[444px] xl:h-[222px] flex flex-wrap p-5 gap-4 justify-around items-center">
