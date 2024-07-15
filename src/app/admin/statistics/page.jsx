@@ -7,6 +7,7 @@ function Users() {
 
         <SidebarPie />
 
+
     </section>
   );
 }
