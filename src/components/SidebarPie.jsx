@@ -1,96 +1,42 @@
 "use client";
-// Import React at the beginning of your component file
-import React from "react";
-import ReactApexChart from "react-apexcharts";
-
-class ApexChart extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      series: [
-        {
-          name: "Net Profit",
-          data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
-        },
-        {
-          name: "Revenue",
-          data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
-        },
-        {
-          name: "Free Cash Flow",
-          data: [35, 41, 36, 26, 45, 48, 52, 53, 41],
-        },
-      ],
-      options: {
-        chart: {
-          type: "bar",
-          height: 350,
-        },
-        plotOptions: {
-          bar: {
-            horizontal: false,
-            columnWidth: "55%",
-            endingShape: "rounded",
-          },
-        },
-        dataLabels: {
-          enabled: false,
-        },
-        stroke: {
-          show: true,
-          width: 2,
-          colors: ["transparent"],
-        },
-        xaxis: {
-          categories: [
-            "Feb",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
+import { Bar } from "react-chartjs-2";
+import Chart from "chart.js/auto";
+const VulnChart = () => {
+  return (
+    <div>
+      <Bar
+        data={{
+          labels: [
+            "Sqli",
+            "XSS",
+            "XXE",
+            "Open Redirect",
+            "Broken Authentication",
           ],
-        },
-        yaxis: {
-          title: {
-            text: "$ (thousands)",
-          },
-        },
-        fill: {
-          opacity: 1,
-        },
-        tooltip: {
-          y: {
-            formatter: function (val) {
-              return "$ " + val + " thousands";
+          datasets: [
+            {
+              label: "# of vulnerabilities",
+              data: [15, 12, 6, 7, 4],
+              backgroundColor: ["red", "yellow", "blue", "black", "green"],
+              borderColor: "orange",
+              borderWidth: 5,
             },
-          },
-        },
-      },
-    };
-  }
-
-  render() {
-    return (
-      <div>
-        <div id="chart">
-          <ReactApexChart
-            options={this.state.options}
-            series={this.state.series}
-            type="bar"
-            height={350}
-          />
-        </div>
-        <div id="html-dist"></div>
-      </div>
-    );
-  }
-}
-
-export default ApexChart; // Don't forget to export your component
-
-// Ensure React is imported properly in your main file where you use ReactDOM.render
+            {
+              label: "Web Apps",
+              data: [20, 13, 6, 8, 9],
+              backgroundColor: "purple",
+              borderColor: "red",
+              borderWidth: 5,
+            },
+          ],
+        }}
+        height={300}
+        width={500}
+        options={{
+          maintainAspectRatio: false,
+        }}
+      />
+    </div>
+  );
+};
+export default VulnChart;
