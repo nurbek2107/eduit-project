@@ -1,9 +1,11 @@
-import React from 'react'
+import { UserData } from "@/components";
 
 function Users() {
   return (
-    <div>Users</div>
-  )
+    <section className="">
+      <UserData />
+    </section>
+  );
 }
 
-export default Users
+export default Users;
