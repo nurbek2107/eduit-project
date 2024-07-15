@@ -1,14 +1,25 @@
-'use client'
-import { useState } from "react";
-import { Button } from "./ExportClients"
-import Link from "next/link"
+"use client";
+import { useState, useEffect } from "react";
+import { Button } from "./ExportClients";
+import Link from "next/link";
 
 function SidebarList() {
   const [activeButton, setActiveButton] = useState(null);
 
+  useEffect(() => {
+    // Retrieve active button ID from localStorage on component mount
+    const storedButtonId = localStorage.getItem("activeButtonId");
+    if (storedButtonId) {
+      setActiveButton(parseInt(storedButtonId));
+    }
+  }, []);
+
   const handleButtonClick = (buttonId) => {
     setActiveButton(buttonId);
+    // Store active button ID in localStorage
+    localStorage.setItem("activeButtonId", buttonId);
   };
+
   return (
     <>
       <ul className="flex flex-col gap-4 w-full">
@@ -534,19 +545,11 @@ function SidebarList() {
             </div>
           </li>
         </Button>
-        
+
+        {/* Add more buttons here */}
       </ul>
     </>
   );
 }
 
-export default SidebarList
-
-
-
-
-
-
-
-
-
+export default SidebarList;
