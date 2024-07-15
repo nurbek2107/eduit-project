@@ -363,10 +363,9 @@ const SimpleLineChart2 = () => {
       <LineChart data={data2}>
         <Tooltip
           contentStyle={{
-            backgroundColor: "rgba(0,0,0,.5)",
+            backgroundColor: "#ff9500b4 ",
+            color: "white",
             fontWeight: "bold",
-            width: "4rem",
-            height: "4rem",
             fontSize: ".8rem",
           }}
         />
