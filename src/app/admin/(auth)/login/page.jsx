@@ -15,7 +15,7 @@ function Login() {
         <div className='px-6 py-10'>
           <h1 className='text-3xl font-bold mt-1 px-2'>Welcome Back, We&apos;ve Missed You!</h1>
 
-          <div className='max-w-9/12 mx-auto flex flex-col items-center gap-4 mt-11'>
+          <div className='max-w-9/12 mx-auto flex flex-col items-center gap-6 mt-11'>
             <FormInput inputText="Email" />
             <FormInput inputText="Password" />
           </div>
