@@ -251,7 +251,7 @@ function SidebarList() {
             <div className="mx-auto w-full min-h-full">
               <Link
                 className="w-full flex items-center justify-between pl-[55px] p-[22px] min-h-full"
-                href="/admin/competition"
+                href="/admin/competitions"
               >
                 <div className="flex items-center gap-[21px]">
                   <svg
