@@ -43,6 +43,7 @@ body {
 .hover-bg:hover svg path {
     stroke: #fff;
 }
+
 svg path {
     stroke: #ff9500;
 }
