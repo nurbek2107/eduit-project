@@ -6,4 +6,5 @@ export { default as UserData } from './UserData'
 export { default as UsersData } from './UsersData'
 export { default as SidebarPie } from './SidebarPie'
 export { default as LineChart } from './LineChart'
-
+export { default as FormCheck } from './FormCheck'
+export { default as FormInput } from './FormInput'
