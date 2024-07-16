@@ -18,6 +18,7 @@
        "@radix-ui/react-scroll-area": [
          "node_modules/@radix-ui/react-scroll-area/dist/index.d.ts"
        ]
+       
      },
      "plugins": [
        {
