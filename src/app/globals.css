@@ -36,7 +36,7 @@ body {
 }
 
 .hover-bg:hover {
-    background: linear-gradient(178.18deg, #ff9500 -13.56%, #f9f5a1 158.3%);
+    background: linear-gradient(178.18deg, #ff9500 -13.56%, #ff9500 158.3%);
     color: #fff;
 }
 
@@ -58,7 +58,7 @@ svg path {
 }
 
 .notification-number {
-    background: linear-gradient(178.18deg, #fa9c04 -13.56%, #d9f64b 158.3%);
+    background: linear-gradient(178.18deg, #ff9500 -13.56%, #ff9500 158.3%);
 }
 
 .active .active-svg path {
