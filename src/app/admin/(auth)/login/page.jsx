@@ -13,7 +13,7 @@ function Login() {
 
       <div className='w-[400px] text-center mx-auto -mt-[230px] bg-white shadow-lg rounded-lg'>
         <div className='px-6 py-10'>
-          <h1 className='text-3xl font-bold mt-1 px-2'>Welcome Back, We've Missed You!</h1>
+          <h1 className='text-3xl font-bold mt-1 px-2'>Welcome Back, We&apos;ve Missed You!</h1>
 
           <div className='max-w-9/12 mx-auto flex flex-col items-center gap-4 mt-11'>
             <FormInput inputText="Email" />
