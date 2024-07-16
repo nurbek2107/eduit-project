@@ -3,9 +3,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "./ExportClients";
 import Link from "next/link";
-
 import { useRef } from "react";
-
 import Image from "next/image";
 import img1 from "./img/icons/chair.png";
 import img2 from "./img/icons/user-interface.png";
