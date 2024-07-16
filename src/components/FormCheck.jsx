@@ -8,6 +8,7 @@ import FormInput from './FormInput';
 import Link from 'next/link';
 
 function FormCheck() {
+    
     return (
         <div className='p-6'>
             <h1 className='text-3xl font-bold mt-1'>Register for a Better Experience</h1>
