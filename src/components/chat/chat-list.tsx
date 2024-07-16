@@ -1,6 +1,6 @@
 import { Message, UserData } from "@/app/data";
 import { cn } from "@/lib/utils";
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { Avatar, AvatarImage } from "../ui/avatar";
 import ChatBottombar from "./chat-bottombar";
 import { AnimatePresence, motion } from "framer-motion";
@@ -20,18 +20,18 @@ export function ChatList({
 }: ChatListProps) {
   const messagesContainerRef = useRef<HTMLDivElement>(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (messagesContainerRef.current) {
-      messagesContainerRef.current.scrollTop =
-        messagesContainerRef.current.scrollHeight;
+      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
     }
   }, [messages]);
 
   return (
-    <div className="w-full overflow overflow-x-hidden h-full flex flex-col">
+    <div className="w-full h-full overflow-hidden flex flex-col">
       <div
         ref={messagesContainerRef}
-        className="w-full overflow-y-auto overflow-x-hidden h-full flex flex-col"
+        className="w-full h-full overflow-y-auto flex flex-col gap-2 p-4"
+        style={{ scrollbarColor: '#81a1c100 #81a1c100' }}
       >
         <AnimatePresence>
           {messages?.map((message, index) => (
@@ -49,45 +49,42 @@ export function ChatList({
                   duration: messages.indexOf(message) * 0.05 + 0.2,
                 },
               }}
-              style={{
-                originX: 0.5,
-                originY: 0.5,
-              }}
               className={cn(
-                "flex flex-col gap-2 p-4 whitespace-pre-wrap",
+                "flex gap-3 items-center",
                 message.name !== selectedUser.name ? "items-end" : "items-start"
               )}
             >
-              <div className="flex gap-3 items-center">
-                {message.name === selectedUser.name && (
-                  <Avatar className="flex justify-center items-center">
-                    <AvatarImage
-                      src={message.avatar}
-                      alt={message.name}
-                      width={6}
-                      height={6}
-                    />
-                  </Avatar>
-                )}
-                <span className=" bg-[#ff9500] text-white p-3 rounded-md max-w-xs">
-                  {message.message}
-                </span>
-                {message.name !== selectedUser.name && (
-                  <Avatar className="flex justify-center items-center">
-                    <AvatarImage
-                      src={message.avatar}
-                      alt={message.name}
-                      width={6}
-                      height={6}
-                    />
-                  </Avatar>
-                )}
-              </div>
+              {message.name === selectedUser.name && (
+                <Avatar>
+                  <AvatarImage
+                    src={message.avatar}
+                    alt={message.name}
+                    width={24}
+                    height={24}
+                  />
+                </Avatar>
+              )}
+              <span className={cn(
+                "bg-[#ff9500] text-white p-3 rounded-md max-w-xs",
+                message.name !== selectedUser.name ? "ml-auto" : "mr-auto"
+              )}>
+                {message.message}
+              </span>
+              {message.name !== selectedUser.name && (
+                <Avatar>
+                  <AvatarImage
+                    src={message.avatar}
+                    alt={message.name}
+                    width={24}
+                    height={24}
+                  />
+                </Avatar>
+              )}
             </motion.div>
           ))}
         </AnimatePresence>
       </div>
-      <ChatBottombar sendMessage={sendMessage} isMobile={isMobile}/>
+      <ChatBottombar sendMessage={sendMessage} isMobile={isMobile} />
     </div>
   );
 }
