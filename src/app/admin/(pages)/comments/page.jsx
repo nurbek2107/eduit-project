@@ -1,9 +1,7 @@
 import React from 'react'
-
+import { ChatLayout } from "@/components/chat/chat-layout";
 function Comments() {
-  return (
-    <div>Comments</div>
-  )
+  return <ChatLayout  navCollapsedSize={8} />;
 }
 
 export default Comments
