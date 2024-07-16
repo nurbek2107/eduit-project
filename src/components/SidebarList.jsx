@@ -360,7 +360,7 @@ function SidebarList() {
           className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${activeButton === 5 ? "active" : ""
             }`}
           style={{ fontFamily: `inherit` }}
-          onClick={() => handleButtonClick(5)}
+          onClick={() => handleButtonClick(6)}
         >
           <li className="w-full flex leading-[18px] rounded-r-full">
             <div className="mx-auto w-full min-h-full">
