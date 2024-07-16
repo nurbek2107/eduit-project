@@ -1,10 +1,16 @@
+import { Navbar, Sidebar } from "@/components"
+
 function App() {
   return (
-    <div>
-      <main className=''>
-        App
-      </main>
-    </div>
+    <>
+      <Navbar />
+      <div className="flex">
+        <Sidebar />
+        <main className=''>
+          App
+        </main>
+      </div>
+    </>
   )
 }
 

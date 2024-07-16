@@ -26,9 +26,8 @@ function SidebarList() {
         <Button
           size="sm"
           variant="text"
-          className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${
-            activeButton === 1 ? "active" : ""
-          }`}
+          className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${activeButton === 1 ? "active" : ""
+            }`}
           style={{ fontFamily: `inherit` }}
           onClick={() => handleButtonClick(1)}
         >
@@ -80,9 +79,8 @@ function SidebarList() {
         <Button
           size="sm"
           variant="text"
-          className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${
-            activeButton === 2 ? "active" : ""
-          }`}
+          className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${activeButton === 2 ? "active" : ""
+            }`}
           style={{ fontFamily: `inherit` }}
           onClick={() => handleButtonClick(2)}
         >
@@ -166,9 +164,8 @@ function SidebarList() {
         <Button
           size="sm"
           variant="text"
-          className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${
-            activeButton === 3 ? "active" : ""
-          }`}
+          className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${activeButton === 3 ? "active" : ""
+            }`}
           style={{ fontFamily: `inherit` }}
           onClick={() => handleButtonClick(3)}
         >
@@ -241,15 +238,15 @@ function SidebarList() {
         <Button
           size="sm"
           variant="text"
-          className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${
-            activeButton === 4 ? "active" : ""
-          }`}
+          className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${activeButton === 4 ? "active" : ""
+            }`}
           style={{ fontFamily: `inherit` }}
           onClick={() => handleButtonClick(4)}
         >
           <li className="w-full flex leading-[18px] rounded-r-full">
             <div className="mx-auto w-full min-h-full">
               <Link
+<<<<<<< HEAD
                 className="w-full flex items-center justify-between pl-[55px] p-[22px] min-h-full"
                 href="/admin/competitions"
               >
@@ -321,6 +318,8 @@ function SidebarList() {
           <li className="w-full flex leading-[18px] rounded-r-full">
             <div className="mx-auto w-full min-h-full">
               <Link
+=======
+>>>>>>> 6ff7ae7caf2ddd1f65bc5b87fb008699211d6f13
                 className="w-full flex items-center pl-[55px] p-[22px] gap-[21px] min-h-full"
                 href="/admin/statistics"
               >
@@ -432,9 +431,8 @@ function SidebarList() {
         <Button
           size="sm"
           variant="text"
-          className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${
-            activeButton === 6 ? "active" : ""
-          }`}
+          className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${activeButton === 5 ? "active" : ""
+            }`}
           style={{ fontFamily: `inherit` }}
           onClick={() => handleButtonClick(6)}
         >
