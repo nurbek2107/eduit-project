@@ -1,4 +1,4 @@
-import { UserData } from "@/components";
+import { UserData } from "../../../../components";
 
 function Users() {
   return (

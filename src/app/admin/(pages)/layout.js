@@ -1,4 +1,4 @@
-import { Navbar, Sidebar } from '@/components'
+import { Navbar, Sidebar } from '../../../components'
 import React from 'react'
 
 function layout({ children }) {
