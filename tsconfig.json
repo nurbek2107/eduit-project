@@ -25,6 +25,6 @@
        }
      ]
    },
-   "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
+   "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", "src/components/chat/chat-layout.tsx", "src/components/chat/chat-bottombar.tsx", "src/components/chat/chat-list.tsx", "src/components/chat/chat-topbar.tsx", "src/components/chat/chat.tsx"],
    "exclude": ["node_modules"]
  }
