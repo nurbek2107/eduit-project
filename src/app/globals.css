@@ -36,13 +36,14 @@ body {
 }
 
 .hover-bg:hover {
-    background: linear-gradient(178.18deg, #ff9500 -13.56%, #ff9500 158.3%);
+    background: linear-gradient(178.18deg, #ff9500 -13.56%, #f9f5a1 158.3%);
     color: #fff;
 }
 
 .hover-bg:hover svg path {
     stroke: #fff;
 }
+
 svg path {
     stroke: #ff9500;
 }
