@@ -28,7 +28,7 @@ export function ChatList({
   }, [messages]);
 
   return (
-    <div className="w-full overflow-y-auto overflow-x-hidden h-full flex flex-col">
+    <div className="w-full overflow overflow-x-hidden h-full flex flex-col">
       <div
         ref={messagesContainerRef}
         className="w-full overflow-y-auto overflow-x-hidden h-full flex flex-col"
@@ -69,7 +69,7 @@ export function ChatList({
                     />
                   </Avatar>
                 )}
-                <span className=" bg-accent p-3 rounded-md max-w-xs">
+                <span className=" bg-[#ff9500] text-white p-3 rounded-md max-w-xs">
                   {message.message}
                 </span>
                 {message.name !== selectedUser.name && (
