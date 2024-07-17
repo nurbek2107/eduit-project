@@ -5,6 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 /* Scrollbar customization */
 ::-webkit-scrollbar {
     width: 12px;
@@ -149,10 +150,6 @@ aside {
 main {
     margin-top: 60px;
     margin-left: 300px;
-}
-
-#root{
     height: 100vh;
-    width: 100vw;
     background: #fff;
 }
