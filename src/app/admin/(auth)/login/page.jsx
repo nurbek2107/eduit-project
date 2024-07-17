@@ -7,7 +7,7 @@ import { Button } from '@material-tailwind/react'
 
 function Login() {
   return (
-    <div className='w-screen h-screen'>
+    <div className='w-screen h-screen bg-white'>
       <div className='h-1/2 bg-login-circle bg-cover bg-no-repeat'>
       </div>
 
