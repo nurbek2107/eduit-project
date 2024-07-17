@@ -1,13 +1,8 @@
-/* globals.css or your global stylesheet */
-
 /* Tailwind CSS base, components, utilities */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-    background-color: #2e3440;
-}
 /* Scrollbar customization */
 ::-webkit-scrollbar {
     width: 12px;
@@ -33,8 +28,6 @@ body {
     color: #fff;
     background: linear-gradient(178.18deg, #ff9500 -13.56%, #ff9500 158.3%);
 }
-
-
 
 .hover-bg:hover {
     background: linear-gradient(178.18deg, #ff9500 -13.56%, #ff9500 158.3%);
