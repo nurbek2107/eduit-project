@@ -1,6 +1,6 @@
 
-import { SidebarPie } from "../../../../components";
-import { LineChart } from "../../../../components";
+import { SidebarPie } from "@/components";
+import { LineChart } from "@/components";
 
 function Users() {
   return (

@@ -1,8 +1,8 @@
-import { UserData } from "../../../../components";
+import { UserData } from "@/components";
 
 function Users() {
   return (
-    <section className="">
+    <section className="m-10">
       <UserData />
     </section>
   );
