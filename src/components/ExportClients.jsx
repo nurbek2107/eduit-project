@@ -57,7 +57,7 @@ export function AvatarWithUserDropdown() {
             />
           </Button>
         </MenuHandler>
-        <MenuList className="p-1">
+        <MenuList className="p-1 mt-3">
           {profileMenuItems.map(({ label, icon, href }, key) => {
             const isLastItem = key === profileMenuItems.length - 1;
             return (
