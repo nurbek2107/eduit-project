@@ -1,9 +1,12 @@
 /* globals.css or your global stylesheet */
-
+body {
+    background: #fff;
+}
 /* Tailwind CSS base, components, utilities */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 /* Scrollbar customization */
 ::-webkit-scrollbar {
@@ -31,9 +34,7 @@
     background: linear-gradient(178.18deg, #ff9500 -13.56%, #ff9500 158.3%);
 }
 
-body {
-    background: #fff;
-}
+
 
 .hover-bg:hover {
     background: linear-gradient(178.18deg, #ff9500 -13.56%, #ff9500 158.3%);
@@ -149,10 +150,6 @@ aside {
 main {
     margin-top: 60px;
     margin-left: 300px;
-}
-
-#root{
     height: 100vh;
-    width: 100vw;
     background: #fff;
 }
