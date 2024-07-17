@@ -1,13 +1,13 @@
 /* globals.css or your global stylesheet */
-body {
-    background: #fff;
-}
+
 /* Tailwind CSS base, components, utilities */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
+body {
+    background-color: #2e3440;
+}
 /* Scrollbar customization */
 ::-webkit-scrollbar {
     width: 12px;
@@ -150,6 +150,6 @@ aside {
 main {
     margin-top: 60px;
     margin-left: 300px;
-    height: 100vh;
+    height: 60cqw;
     background: #fff;
 }
