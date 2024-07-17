@@ -1,5 +1,5 @@
-import { SidebarPie } from "../../../../components";
-import { UsersData } from "../../../../components";
+import { SidebarPie } from "@/components";
+import { UsersData } from "@/components";
 
 
 function Users() {
