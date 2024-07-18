@@ -6,7 +6,6 @@ import {
 import {
   Card,
   CardHeader,
-  Input,
   Typography,
   Button,
   CardBody,
@@ -15,7 +14,6 @@ import {
   Tabs,
   TabsHeader,
   Tab,
-  Avatar,
 } from "@material-tailwind/react";
 import Link from "next/link";
 const TABS = [
@@ -24,12 +22,24 @@ const TABS = [
     value: "all",
   },
   {
-    label: "Payed",
-    value: "payed",
+    label: "Continues",
+    value: "continues",
   },
   {
-    label: "Did not payed",
-    value: "did-not-payed",
+    label: "Ended",
+    value: "ended",
+  },
+  {
+    label: "Programming",
+    value: "programming",
+  },
+  {
+    label: "Design",
+    value: "design",
+  },
+  {
+    label: "Marketing",
+    value: "marketing",
   },
 ];
 
@@ -37,43 +47,44 @@ const TABLE_HEAD = ["Competitions", "Participants", "Status", "Started"];
 
 const TABLE_ROWS = [
   {
-    title:"Front end",
-    link:"frontend",
-    participants:256,
-    status:"ongoing",
-    started:"continues"
+    title:"Front-end Master",
+    link:"frontend_master",
+    type:"programming",
+    participants:"256 people",
+    status:"continues",
+    started:"12.03.2024"
   },
   {
-    img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-2.jpg",
-    name: "Alexa Liras",
-    email: "alexa@creative-tim.com",
-    org: "Frontend Vue JS",
-    online: false,
-    date: "23/04/18",
+    title:"Back-end Master",
+    link:"backend_master",
+    type:"programming",
+    participants:"476 people",
+    status:"ended",
+    started:"26.10.2023"
   },
   {
-    img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-1.jpg",
-    name: "Laurent Perrier",
-    email: "laurent@creative-tim.com",
-    org: "Graphic Design",
-    online: false,
-    date: "19/09/17",
+    title:"Art of Creativity",
+    link:"art_of_creativity",
+    type:"design",
+    participants:"825 people",
+    status:"ended",
+    started:"30.05.2024"
   },
   {
-    img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-4.jpg",
-    name: "Michael Levi",
-    email: "michael@creative-tim.com",
-    org: "Backend Bootcamp",
-    online: true,
-    date: "24/12/08",
+    title:"Easy Money From Trade",
+    link:"easy_money_from_trade",
+    type:"marketing",
+    participants:"347 people",
+    status:"continues",
+    started:"12.07.2024"
   },
   {
-    img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-5.jpg",
-    name: "Richard Gran",
-    email: "richard@creative-tim.com",
-    org: "Data Science",
-    online: false,
-    date: "04/10/21",
+    title:"Logo Master",
+    link:"logo_master",
+    type:"design",
+    participants:"487 people",
+    status:"continues",
+    started:"12.12.2024"
   },
 ];
 
@@ -94,8 +105,8 @@ function CompetitionData() {
           </div>
 
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <Tabs value="all" className="md:w-max w-[500px]">
-              <TabsHeader className="w-[500px]">
+            <Tabs value="all" className="w-[600px]">
+              <TabsHeader className="w-[600px]">
                 {TABS.map(({ label, value }) => (
                   <Tab key={value} value={value}>
                     &nbsp;&nbsp;{label}&nbsp;&nbsp;
@@ -120,7 +131,7 @@ function CompetitionData() {
                       className="flex items-center justify-between gap-2 font-normal leading-none opacity-70"
                     >
                       {head}{" "}
-                      {index !== TABLE_HEAD.length - 1 && (
+                      {index !== TABLE_HEAD.length && (
                         <ChevronUpDownIcon
                           strokeWidth={2}
                           className="h-4 w-4"
@@ -133,7 +144,7 @@ function CompetitionData() {
             </thead>
             <tbody>
               {TABLE_ROWS.map(
-                ({ img, name, email, org, online, date, title, link }, index) => {
+                ({title,link,started,status,participants,type,}, index) => {
                   const isLast = index === TABLE_ROWS.length - 1;
                   const classes = isLast
                     ? "p-4"
@@ -142,7 +153,7 @@ function CompetitionData() {
                     <tr
                       role="link"
                       href="/"
-                      key={name}
+                      key={link}
                       className="cursor-pointer hover:bg-gray-200"
                     >
                       <td className={`${classes}`}>
@@ -150,16 +161,10 @@ function CompetitionData() {
                           <div className="flex flex-col">
                             <Typography
                               variant="paragraph"
+                              color="blue"
                               className="link-primary underline"
                             >
                               <Link href={'competitions/'+link}>{title}</Link>
-                            </Typography>
-                            <Typography
-                              variant="small"
-                              color="blue-gray"
-                              className="font-normal opacity-70"
-                            >
-                              {email}
                             </Typography>
                           </div>
                         </div>
@@ -169,34 +174,30 @@ function CompetitionData() {
                           <Typography
                             variant="small"
                             color="blue-gray"
-                            className="font-normal"
-                          ></Typography>
-                          <Typography
-                            variant="small"
-                            color="blue-gray"
-                            className="font-normal opacity-70"
+                            className="font-normal opacity-70 "
                           >
-                            {org}
+                            {participants}
                           </Typography>
                         </div>
                       </td>
                       <td className={classes}>
                         <div className="w-max">
-                          <Chip
-                            variant="ghost"
-                            size="sm"
-                            value={online ? "online" : "pause"}
-                            color={online ? "green" : "blue-gray"}
-                          />
+                        <Typography
+                          variant="small"
+                          color="blue-gray"
+                          className={`relative grid items-center font-sans font-bold uppercase whitespace-nowrap select-none  py-1 px-2 text-xs rounded-md ${status == "continues" ? "bg-green-500/20 text-green-900":"bg-red-500/20 text-red-900"}`}
+                        >
+                          {status}
+                        </Typography>
                         </div>
                       </td>
                       <td className={classes}>
-                        <Typography
+                      <Typography
                           variant="small"
                           color="blue-gray"
                           className="font-normal"
                         >
-                          {date}
+                          {started}
                         </Typography>
                       </td>
                     </tr>
