@@ -5,6 +5,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    background-color: #2e3440;
+}
 /* Scrollbar customization */
 ::-webkit-scrollbar {
     width: 12px;
@@ -31,12 +34,10 @@
     background: linear-gradient(178.18deg, #ff9500 -13.56%, #ff9500 158.3%);
 }
 
-body {
-    background: #fff;
-}
+
 
 .hover-bg:hover {
-    background: linear-gradient(178.18deg, #ff9500 -13.56%, #f9f5a1 158.3%);
+    background: linear-gradient(178.18deg, #ff9500 -13.56%, #ff9500 158.3%);
     color: #fff;
 }
 
@@ -58,7 +59,7 @@ svg path {
 }
 
 .notification-number {
-    background: linear-gradient(178.18deg, #fa9c04 -13.56%, #d9f64b 158.3%);
+    background: linear-gradient(178.18deg, #ff9500 -13.56%, #ff9500 158.3%);
 }
 
 .active .active-svg path {
@@ -123,4 +124,32 @@ svg path {
 
 .t1 {
     text-overflow: ellipsis;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    line-height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #fff;
+}
+
+aside {
+    position: fixed;
+    top: 60px;
+    /* Height of the header */
+    left: 0;
+    padding-top: 20px;
+    z-index: 999;
+    background-color: #fff;
+}
+
+main {
+    margin-top: 60px;
+    margin-left: 300px;
+    height: 60cqw;
+    background: #fff;
 }

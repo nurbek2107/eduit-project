@@ -7,7 +7,7 @@ import { Button } from '@material-tailwind/react'
 
 function Login() {
   return (
-    <div className='w-screen h-screen'>
+    <div className='w-screen h-screen bg-white'>
       <div className='h-1/2 bg-login-circle bg-cover bg-no-repeat'>
       </div>
 
@@ -15,7 +15,7 @@ function Login() {
         <div className='px-6 py-10'>
           <h1 className='text-3xl font-bold mt-1 px-2'>Welcome Back, We&apos;ve Missed You!</h1>
 
-          <div className='max-w-9/12 mx-auto flex flex-col items-center gap-4 mt-11'>
+          <div className='max-w-9/12 mx-auto flex flex-col items-center gap-6 mt-11'>
             <FormInput inputText="Email" />
             <FormInput inputText="Password" />
           </div>

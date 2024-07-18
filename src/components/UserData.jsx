@@ -81,7 +81,7 @@ const TABLE_ROWS = [
 
 function UserData() {
     return (
-        <section className="w-full bg-[#fff9fe] py-[45px] px-[85px]">
+        <section className="w-full py-[45px] px-[85px]">
             <Card className="h-full">
                 <CardHeader floated={false} shadow={false} className="rounded-none">
                     <div className="mb-8 flex items-center justify-between gap-8">

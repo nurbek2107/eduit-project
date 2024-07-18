@@ -1,41 +1,31 @@
-{
-  "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "noEmit": true,
-    "incremental": true,
-    "module": "esnext",
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "baseUrl": ".", // Add this line
-    "paths": {
-      // Add this block
-      "@/*": [
-        "src/*"
-      ]
-    },
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
-  },
-  "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
-}
+ {
+   "compilerOptions": {
+     "lib": ["dom", "dom.iterable", "esnext"],
+     "allowJs": true,
+     "skipLibCheck": true,
+     "strict": false,
+     "noEmit": true,
+     "incremental": true,
+     "module": "esnext",
+     "esModuleInterop": true,
+     "moduleResolution": "node",
+     "resolveJsonModule": true,
+     "isolatedModules": true,
+     "jsx": "preserve",
+     "baseUrl": ".",
+     "paths": {
+       "@/*": ["src/*"],
+       "@radix-ui/react-scroll-area": [
+         "node_modules/@radix-ui/react-scroll-area/dist/index.d.ts"
+       ]
+       
+     },
+     "plugins": [
+       {
+         "name": "next"
+       }
+     ]
+   },
+   "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", "src/components/chat/chat-layout.tsx", "src/components/chat/chat-bottombar.tsx", "src/components/chat/chat-list.tsx", "src/components/chat/chat-topbar.tsx", "src/components/chat/chat.tsx"],
+   "exclude": ["node_modules"]
+ }

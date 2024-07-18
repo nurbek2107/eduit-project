@@ -71,6 +71,7 @@ function SidebarList() {
                     strokeLinejoin="round"
                   />
                 </svg>
+
                 <span className="inline-block mr-8  span-class">overview</span>
               </Link>
             </div>
@@ -179,6 +180,7 @@ function SidebarList() {
                 href="/admin/comments"
               >
                 <div className="flex items-center gap-[21px]">
+
                   <svg
                     className="active-svg"
                     width="17"
@@ -399,7 +401,7 @@ function SidebarList() {
             activeButton === 6 ? "active" : ""
           }`}
           style={{ fontFamily: `inherit` }}
-          onClick={() => handleButtonClick(6)}
+          onClick={() => handleButtonClick(5)}
         >
           <li className="w-full flex leading-[18px] rounded-r-full">
             <div className="mx-auto w-full min-h-full">
