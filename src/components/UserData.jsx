@@ -4,7 +4,6 @@ import {
     MagnifyingGlassIcon,
     ChevronUpDownIcon,
 } from "@heroicons/react/24/outline";
-import { PencilIcon, UserPlusIcon } from "@heroicons/react/24/solid";
 import {
     Card,
     CardHeader,
@@ -18,10 +17,7 @@ import {
     TabsHeader,
     Tab,
     Avatar,
-    IconButton,
-    Tooltip,
 } from "@material-tailwind/react";
-import Link from "next/link";
 
 const TABS = [
     {
