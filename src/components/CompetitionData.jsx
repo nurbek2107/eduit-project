@@ -164,7 +164,7 @@ function CompetitionData() {
                               color="blue"
                               className="link-primary underline"
                             >
-                              <Link href={'competitions/'+link}>{title}</Link>
+                              <Link href={'competitions/' + link}>{title}</Link>
                             </Typography>
                           </div>
                         </div>
