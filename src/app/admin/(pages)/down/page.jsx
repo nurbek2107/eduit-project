@@ -1,9 +1,11 @@
 import { FileUpload } from "@/components";
 
-export default function Home() {
+function Users() {
   return (
-    <div>
+    <section className="m-10">
       <FileUpload />
-    </div>
+    </section>
   );
 }
+
+export default Users;
