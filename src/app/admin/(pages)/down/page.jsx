@@ -1,11 +1,9 @@
-import { UserData } from "@/components";
+import { FileUpload } from "@/components";
 
-function Users() {
+export default function Home() {
   return (
-    <section className="m-10">
-      <UserData />
-    </section>
+    <div>
+      <FileUpload />
+    </div>
   );
 }
-
-export default Users;
