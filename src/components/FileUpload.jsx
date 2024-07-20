@@ -2,7 +2,6 @@
 import { useState } from "react";
 import {
   MagnifyingGlassIcon,
-  ChevronUpDownIcon,
   TrashIcon,
   PencilIcon,
 } from "@heroicons/react/24/outline";
@@ -14,20 +13,11 @@ import {
   Button,
   CardBody,
   CardFooter,
-  Tabs,
-  TabsHeader,
-  Tab,
   Dialog,
   DialogHeader,
   DialogBody,
   DialogFooter,
 } from "@material-tailwind/react";
-
-const TABS = [
-  { label: "All", value: "all" },
-  { label: "Active", value: "active" },
-  { label: "Completed", value: "completed" },
-];
 
 const columns = [
   { label: "Course", key: "title" },
@@ -71,7 +61,6 @@ function CourseData() {
     date: "",
   });
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedTab, setSelectedTab] = useState("all");
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -102,7 +91,7 @@ function CourseData() {
 
     setRows((prev) => {
       const updatedRows = [...prev, newCourse];
-      filterRows(selectedTab, searchTerm, updatedRows);
+      filterRows("all", searchTerm, updatedRows);
       return updatedRows;
     });
 
@@ -132,7 +121,7 @@ function CourseData() {
           ? { ...row, ...editCourse, title: editCourse.title }
           : row
       );
-      filterRows(selectedTab, searchTerm, updatedRows);
+      filterRows("all", searchTerm, updatedRows);
       return updatedRows;
     });
 
@@ -149,7 +138,7 @@ function CourseData() {
   const handleDeleteCourse = (title) => {
     setRows((prev) => {
       const updatedRows = prev.filter((row) => row.title !== title);
-      filterRows(selectedTab, searchTerm, updatedRows);
+      filterRows("all", searchTerm, updatedRows);
       return updatedRows;
     });
   };
@@ -157,12 +146,7 @@ function CourseData() {
   const handleSearch = (e) => {
     const searchValue = e.target.value.toLowerCase();
     setSearchTerm(searchValue);
-    filterRows(selectedTab, searchValue);
-  };
-
-  const handleTabChange = (value) => {
-    setSelectedTab(value);
-    filterRows(value, searchTerm);
+    filterRows("all", searchValue);
   };
 
   const filterRows = (tab, searchValue, data = rows) => {
@@ -191,21 +175,18 @@ function CourseData() {
   };
 
   return (
-    <section className="w-full py-[45px] px-[85px]">
+    <section className="w-full py-12 px-20">
       <Card className="h-full">
         <CardHeader floated={false} shadow={false} className="rounded-none">
-          <div className="flex flex-col items-center justify-between gap-4 md:flex-row ">
+          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <div className="md:w-72 flex gap-2">
-              <div className="w-[300px] flex gap-2">
-                <div className="w-full">
-                  <Input
-                    label="Search"
-                    className="w-full"
-                    icon={<MagnifyingGlassIcon className="h-5 w-5" />}
-                    value={searchTerm}
-                    onChange={handleSearch}
-                  />
-                </div>
+              <div className="w-full">
+                <Input
+                  label="Search"
+                  icon={<MagnifyingGlassIcon className="h-5 w-5" />}
+                  value={searchTerm}
+                  onChange={handleSearch}
+                />
               </div>
             </div>
             <div className="mb-8 flex items-center justify-between gap-8">
@@ -230,7 +211,7 @@ function CourseData() {
                 return (
                   <tr
                     key={row.title}
-                    className="cursor-pointer hover:bg-gray-200"
+                    className="cursor-pointer hover:bg-gray-200 "
                   >
                     {columns.map(({ key }) => (
                       <td key={key} className={classes}>
