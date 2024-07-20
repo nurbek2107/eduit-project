@@ -21,16 +21,16 @@ import {
 
 // profile menu component
 const profileMenuItems = [
-    {
-        label: "My Profile",
-        icon: UserCircleIcon,
-        href: '/'
-    },
-    {
-        label: "Sign Out",
-        icon: PowerIcon,
-        href: '/'
-    },
+  {
+    label: "My Profile",
+    icon: UserCircleIcon,
+    href: "/admin/profil",
+  },
+  {
+    label: "Sign Out",
+    icon: PowerIcon,
+    href: "",
+  },
 ];
 
 export function AvatarWithUserDropdown() {
