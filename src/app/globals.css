@@ -23,6 +23,22 @@
     background-color: #81a1c1;
 }
 
+.bg-light {
+    background-color: #ffffff;
+}
+
+.text-light {
+    color: #000000;
+}
+
+/* Dark mode uchun ranglar */
+.dark .bg-light {
+    background-color: #121212;
+}
+
+.dark .text-light {
+    color: #e0e0e0;
+}
 /* Other styles */
 .active {
     color: #fff;
