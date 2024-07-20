@@ -172,9 +172,9 @@ const Profile = ({
                   )}
                 </span>
               </li>
-              <li className="flex items-center py-3">
+              <li className="flex flex-col  py-3 ">
                 <span>Member since</span>
-                <span className="ml-auto">
+                <span className=" mt-3">
                   {isEditing ? (
                     <Input
                       label="memberSince"
@@ -182,7 +182,7 @@ const Profile = ({
                       name="memberSince"
                       value={formData.memberSince}
                       onChange={handleChange}
-                      className="bg-gray-100 py-1 px-2 rounded text-gray-700 text-sm"
+                      className="bg-gray-100 py-1  rounded text-gray-700 text-sm "
                       placeholder="Member Since"
                     />
                   ) : (
