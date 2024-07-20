@@ -1,8 +1,8 @@
-import CompetitionData from '../../../../components/CompetitionData'
+import { CompetitionData } from "@/components"
 
 function competitions() {
   return (
-    <div><CompetitionData/></div>
+    <div><CompetitionData /></div>
   )
 }
 
