@@ -23,15 +23,6 @@ import {
 } from "@material-tailwind/react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { PencilIcon } from "lucide-react";
-
-const TABS = [
-  { label: "All", value: "all" },
-  { label: "Payed", value: "payed" },
-  { label: "Did not payed", value: "did-not-payed" },
-];
-
-const TABLE_HEAD = ["Teachers", "Course", "Status", "Employed", "Actions"];
 
 const initialRows = [
   {
@@ -50,7 +41,6 @@ function Settings() {
   const [rows, setRows] = useState(initialRows);
   const [filteredRows, setFilteredRows] = useState(initialRows);
   const [openDialog, setOpenDialog] = useState(false);
-  const [openEditDialog, setOpenEditDialog] = useState(false);
   const [newUser, setNewUser] = useState({
     img: "",
     name: "",
@@ -63,17 +53,6 @@ function Settings() {
   const [searchTerm, setSearchTerm] = useState("");
   const [isClient, setIsClient] = useState(false);
 
-  const [editCourse, setEditCourse] = useState({
-    originalTitle: "",
-    name: "",
-    instructor: "",
-    status: "",
-    date: "",
-  });
-
-
-  const [selectedTab, setSelectedTab] = useState("all");
-
   useEffect(() => {
     setIsClient(true);
   }, []);
@@ -83,37 +62,6 @@ function Settings() {
     setNewUser({
       ...newUser,
       [name]: type === "checkbox" ? checked : value,
-    });
-  };
-
-  const handleEditCourse = () => {
-    if (
-      !editCourse.name ||
-      !editCourse.instructor ||
-      !editCourse.status ||
-      !editCourse.date
-    ) {
-      alert("Please fill in all fields.");
-      return;
-    }
-
-    setRows((prev) => {
-      const updatedRows = prev.map((row) =>
-        row.name === editCourse.originalTitle
-          ? { ...row, ...editCourse, name: editCourse.name }
-          : row
-      );
-      filterRows(selectedTab, searchTerm, updatedRows);
-      return updatedRows;
-    });
-
-    setOpenEditDialog(false);
-    setEditCourse({
-      originalTitle: "",
-      name: "",
-      instructor: "",
-      status: "",
-      date: "",
     });
   };
 
@@ -182,25 +130,6 @@ function Settings() {
     }
   };
 
-  const handleEditInputChange = (e) => {
-    const { name, value } = e.target;
-    setEditCourse((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const openEditDialogHandler = (course) => {
-    setEditCourse({
-      originalTitle: course.name,
-      name: course.name,
-      instructor: course.org,
-      status: course.status,
-      date: course.date,
-    });
-    setOpenEditDialog(true);
-  };
-
   return (
     <section className="w-full py-[45px] px-[85px]">
       <Card className="h-full">
@@ -241,30 +170,6 @@ function Settings() {
         </CardHeader>
         <CardBody className="overflow-scroll px-0 ">
           <table className="mt-4 w-full min-w-max table-auto text-left">
-            <thead>
-              <tr>
-                {TABLE_HEAD.map((head, index) => (
-                  <th
-                    key={head}
-                    className="cursor-pointer border-y border-blue-gray-100 bg-blue-gray-50/50 p-4 transition-colors hover:bg-blue-gray-50"
-                  >
-                    <Typography
-                      variant="small"
-                      color="blue-gray"
-                      className="flex items-center justify-between gap-2 font-normal leading-none opacity-70 text-center"
-                    >
-                      {head}{" "}
-                      {index !== TABLE_HEAD.length - 1 && (
-                        <ChevronUpDownIcon
-                          strokeWidth={2}
-                          className="h-4 w-4"
-                        />
-                      )}
-                    </Typography>
-                  </th>
-                ))}
-              </tr>
-            </thead>
             <tbody>
               {filteredRows.map(
                 (row, index) => {
@@ -312,7 +217,7 @@ function Settings() {
                           className="flex flex-col items-center justify-center"
                           variant="ghost"
                           size="sm"
-                          value={row.online ? "online" : "pause"}
+                          value={row.online ? "online" : "offline"}
                           color={row.online ? "green" : "blue-gray"}
                         />
                       </td>
@@ -326,13 +231,6 @@ function Settings() {
                         </Typography>
                       </td>
                       <td className={classes}>
-                        <Button
-                          variant="text"
-                          color="blue"
-                          onClick={() => openEditDialogHandler(row)}
-                        >
-                          <PencilIcon className="h-5 w-5" />
-                        </Button>
                         <Button
                           variant="text"
                           color="red"
@@ -404,50 +302,7 @@ function Settings() {
         </DialogFooter>
       </Dialog>
 
-      {/* Edit Course Dialog */}
-      <Dialog open={openEditDialog} handler={() => setOpenEditDialog(false)}>
-        <DialogHeader>Edit Course</DialogHeader>
-        <DialogBody>
-          <div className="flex flex-col gap-4">
-            <Input
-              label="Title"
-              name="name"
-              value={editCourse.name}
-              onChange={handleEditInputChange}
-            />
-            <Input
-              label="Course Assignment"
-              name="instructor"
-              value={editCourse.instructor}
-              onChange={handleEditInputChange}
-            />
-            <Input
-              label="Status"
-              name="status"
-              value={editCourse.status}
-              onChange={handleEditInputChange}
-            />
-            <Input
-              label="Date"
-              name="date"
-              value={editCourse.date}
-              onChange={handleEditInputChange}
-            />
-          </div>
-        </DialogBody>
-        <DialogFooter>
-          <Button
-            variant="text"
-            color="red"
-            onClick={() => setOpenEditDialog(false)}
-          >
-            Cancel
-          </Button>
-          <Button variant="gradient" onClick={handleEditCourse}>
-            Save Changes
-          </Button>
-        </DialogFooter>
-      </Dialog>
+
     </section>
   );
 }
