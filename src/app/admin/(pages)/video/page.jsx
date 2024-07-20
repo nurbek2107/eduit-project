@@ -29,7 +29,7 @@ function Users() {
       <Tabs id="custom-animation" value="html" className=''>
         <TabsHeader>
           {data.map(({ label, value }) => (
-            <Tab key={value} value={value}>
+            <Tab key={value} value={value} >
               {label}
             </Tab>
           ))}
@@ -42,7 +42,7 @@ function Users() {
           }}
         >
           {data.map(({ value, desc }) => (
-            <TabPanel key={value} value={value}>
+            <TabPanel key={value} value={value} >
               {desc}
             </TabPanel>
           ))}
