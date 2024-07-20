@@ -20,7 +20,7 @@ const ProfilePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-6">
+    <div className="min-h-screen  flex flex-col items-center justify-center p-6">
       {isEditing ? (
         // Add form or editing component here
         <div>
