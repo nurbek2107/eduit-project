@@ -5,7 +5,7 @@ function Users() {
         style={{ position: "relative", paddingTop: "56.25%", width: "100%" }}
       >
         <iframe
-          src="https://kinescope.io/embed/5L8yQxvTa8e28zL7zRHL7N"
+          src="https://kinescope.io/embed/8KDbVsbuzjcq8KLwwd2ayn"
           allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write;"
           frameBorder="0"
           allowFullScreen
@@ -20,7 +20,7 @@ function Users() {
       </div>
       <div style={{ marginTop: "0rem" }}>
         <iframe
-          src="https://kinescope.io/chat/5L8yQxvTa8e28zL7zRHL7N"
+          src="https://kinescope.io/chat/8KDbVsbuzjcq8KLwwd2ayn"
           allow="fullscreen"
           frameborder="0"
           allowfullscreen

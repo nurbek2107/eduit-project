@@ -24,9 +24,8 @@ function SidebarList() {
         <Button
           size="sm"
           variant="text"
-          className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${
-            activeButton === 1 ? "active" : ""
-          }`}
+          className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${activeButton === 1 ? "active" : ""
+            }`}
           style={{ fontFamily: `inherit` }}
           onClick={() => handleButtonClick(1)}
         >
@@ -79,9 +78,8 @@ function SidebarList() {
         <Button
           size="sm"
           variant="text"
-          className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${
-            activeButton === 2 ? "active" : ""
-          }`}
+          className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${activeButton === 2 ? "active" : ""
+            }`}
           style={{ fontFamily: `inherit` }}
           onClick={() => handleButtonClick(2)}
         >
@@ -165,9 +163,8 @@ function SidebarList() {
         <Button
           size="sm"
           variant="text"
-          className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${
-            activeButton === 3 ? "active" : ""
-          }`}
+          className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${activeButton === 3 ? "active" : ""
+            }`}
           style={{ fontFamily: `inherit` }}
           onClick={() => handleButtonClick(3)}
         >
@@ -240,9 +237,8 @@ function SidebarList() {
         <Button
           size="sm"
           variant="text"
-          className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${
-            activeButton === 4 ? "active" : ""
-          }`}
+          className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${activeButton === 4 ? "active" : ""
+            }`}
           style={{ fontFamily: `inherit` }}
           onClick={() => handleButtonClick(4)}
         >
@@ -274,9 +270,8 @@ function SidebarList() {
         <Button
           size="sm"
           variant="text"
-          className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${
-            activeButton === 5 ? "active" : ""
-          }`}
+          className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${activeButton === 5 ? "active" : ""
+            }`}
           style={{ fontFamily: `inherit` }}
           onClick={() => handleButtonClick(5)}
         >
@@ -393,9 +388,8 @@ function SidebarList() {
         <Button
           size="sm"
           variant="text"
-          className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${
-            activeButton === 7 ? "active" : ""
-          }`}
+          className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${activeButton === 7 ? "active" : ""
+            }`}
           style={{ fontFamily: `inherit` }}
           onClick={() => handleButtonClick(7)}
         >
@@ -403,7 +397,7 @@ function SidebarList() {
             <div className="mx-auto w-full min-h-full">
               <Link
                 className="w-full flex items-center pl-[55px] p-[22px] gap-[21px] min-h-full"
-                href="/admin/down"
+                href="/admin/video"
               >
                 <svg
                   width="24"
@@ -422,14 +416,14 @@ function SidebarList() {
                   />
                 </svg>
                 <span className="inline-block mr-8 hover:text-white span-class">
-                  Video Upload
+                  Video Settings
                 </span>{" "}
               </Link>
             </div>
           </li>
         </Button>
 
-        <Button
+        {/* <Button
           size="sm"
           variant="text"
           className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${
@@ -466,13 +460,14 @@ function SidebarList() {
               </Link>
             </div>
           </li>
-        </Button>
+        </Button> */}
+
+
         <Button
           size="sm"
           variant="text"
-          className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${
-            activeButton === 6 ? "active" : ""
-          }`}
+          className={`flex leading-[18px] rounded-r-full text-base font-normal lowercase hover:text-white hover-bg p-0 ${activeButton === 6 ? "active" : ""
+            }`}
           style={{ fontFamily: `inherit` }}
           onClick={() => handleButtonClick(6)}
         >
@@ -647,7 +642,7 @@ function SidebarList() {
                   </defs>
                 </svg>
                 <span className="inline-block mr-8 hover:text-white span-class">
-                  settings
+                  managment
                 </span>{" "}
                 {/* Add a custom class */}
               </Link>

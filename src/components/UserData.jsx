@@ -1,4 +1,4 @@
-    "use client";
+"use client";
 
 import { useState } from "react";
 import {
@@ -231,8 +231,9 @@ function UserData() {
                           {org}
                         </Typography>
                       </td>
-                      <td className={classes}>
+                      <td className={`${classes}`}>
                         <Chip
+                          className="flex flex-col items-center justify-center"
                           variant="ghost"
                           size="sm"
                           value={online ? "online" : "pause"}
