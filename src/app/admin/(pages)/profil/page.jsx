@@ -6,6 +6,9 @@ const ProfilePage = () => {
   const [user, setUser] = useState({
     name: "John Doe",
     avatar: "https://docs.material-tailwind.com/img/face-2.jpg", // Rasmni `public` papkasidan yuklash
+    title: "Frontend",
+    memberSince: "memberSince",
+    status: "Active",
     bio: "Frontend developer with a passion for creating beautiful and functional user experiences.",
     email: "john.doe@example.com",
     phone: "+1 (123) 456-7890",

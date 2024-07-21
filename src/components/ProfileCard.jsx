@@ -5,7 +5,6 @@ import Image from "next/image";
 
 const Profile = ({
   user = {}, // Default to an empty object if user is undefined
-  similarProfiles = [],
   experiences = [],
 }) => {
   const [isEditing, setIsEditing] = useState(false);
