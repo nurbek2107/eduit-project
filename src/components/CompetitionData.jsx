@@ -671,7 +671,9 @@ function CourseData() {
                   <tr
                     key={row.id}
                     className="cursor-pointer hover:bg-gray-200"
-                    onClick={() => router.push(`/admin/SingleCompetition/${row.id}`)}
+                    onClick={() =>
+                      router.push(`/admin/SingleCompetition/${row.id}`)
+                    }
                   >
                     {columns.map(({ key }) => (
                       <td key={key} className={classes}>
@@ -759,16 +761,21 @@ function CourseData() {
               <Option value="Active">Active</Option>
               <Option value="Completed">Completed</Option>
             </Select>
-            <DatePicker
-              selected={newCourse.date}
-              onChange={(date) =>
-                setNewCourse((prev) => ({
-                  ...prev,
-                  date,
-                }))
-              }
-              dateFormat="yyyy-MM-dd"
-            />
+            <div className="relative z-50">
+              <DatePicker
+                selected={editCourse.date}
+                onChange={(date) =>
+                  setEditCourse((prev) => ({
+                    ...prev,
+                    date,
+                  }))
+                }
+                portalId="root-portal"
+                withPortal
+                dateFormat="dd/MM/yyyy"
+                className="w-full border rounded"
+              />
+            </div>
           </div>
         </DialogBody>
         <DialogFooter className="flex gap-4">
@@ -779,11 +786,7 @@ function CourseData() {
           >
             Cancel
           </Button>
-          <Button
-            variant="gradient"
-            color="green"
-            onClick={handleAddCourse}
-          >
+          <Button variant="gradient" color="green" onClick={handleAddCourse}>
             Add
           </Button>
         </DialogFooter>
@@ -819,16 +822,21 @@ function CourseData() {
               <Option value="Active">Active</Option>
               <Option value="Completed">Completed</Option>
             </Select>
-            <DatePicker
-              selected={editCourse.date}
-              onChange={(date) =>
-                setEditCourse((prev) => ({
-                  ...prev,
-                  date,
-                }))
-              }
-              dateFormat="yyyy-MM-dd"
-            />
+            <div className="relative z-50">
+              <DatePicker
+                selected={editCourse.date}
+                onChange={(date) =>
+                  setEditCourse((prev) => ({
+                    ...prev,
+                    date,
+                  }))
+                }
+                portalId="root-portal"
+                withPortal
+                dateFormat="dd/MM/yyyy"
+                className="w-full border rounded"
+              />
+            </div>
           </div>
         </DialogBody>
         <DialogFooter>
@@ -839,11 +847,7 @@ function CourseData() {
           >
             Cancel
           </Button>
-          <Button
-            variant="gradient"
-            color="green"
-            onClick={handleEditCourse}
-          >
+          <Button variant="gradient" color="green" onClick={handleEditCourse}>
             Save
           </Button>
         </DialogFooter>
