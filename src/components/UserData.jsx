@@ -317,12 +317,6 @@ function UserData() {
                 Online
               </Typography>
             </div>
-            <Input
-              label="Date"
-              name="date"
-              value={newUser.date}
-              onChange={handleInputChange}
-            />
           </div>
         </DialogBody>
         <DialogFooter>
